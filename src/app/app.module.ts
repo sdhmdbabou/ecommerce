@@ -10,6 +10,8 @@ import { ShopComponent } from './component/shop/shop.component';
 import { AccountComponent } from './component/account/account.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { SearchComponent } from './component/search/search.component';
+import { PopularproductsComponent } from './component/home/popularproducts/popularproducts.component';
+import { CarouselComponent } from './component/home/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SearchComponent } from './component/search/search.component';
     ShopComponent,
     AccountComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    PopularproductsComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
