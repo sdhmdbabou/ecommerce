@@ -1,0 +1,32 @@
+
+@media (max-width:2000)  {
+
+    .itemsize{
+        margin: 2vw;
+        width: 15vw;
+        height :  15vw;
+    }
+
+}
+
+
+@media (max-width:1000)  {
+    .itemsize{
+        margin: 2vw;
+        width: 25vw;
+        height :  25vw;
+    }
+}
+
+
+
+
+@media (max-width:600) {
+ 
+
+    .itemsize{
+        margin: 8vw;
+        width: 90vw;
+        height :  90vw;
+    }
+}
