@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { CategoryComponent } from './component/category/category.component';
-
+//reactive forme
+import { ReactiveFormsModule } from '@angular/forms';
 import { ShopComponent } from './component/shop/shop.component';
 import { AccountComponent } from './component/account/account.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
@@ -16,6 +17,16 @@ import { ProductItemComponent } from './component/home/popularproducts/product-i
 import { CardproductsComponent } from './component/home/cardproducts/cardproducts.component';
 import { ShopcardComponent } from './component/shop/shopcard/shopcard.component';
 import { CardComponent } from './component/card/card.component';
+import { CarditemComponent } from './component/card/carditem/carditem.component';
+import { LoginComponent } from './component/account/login/login.component';
+import { CreataccuntComponent } from './component/account/creataccunt/creataccunt.component';
+import { FreeLancerComponent } from './component/account/freeLancer/freeLancer.component';
+import { Normal_userComponent } from './component/account/normal_user/normal_user.component';
+import { ServiceComponent } from './component/account/freeLancer/service/service.component';
+import { ProduitComponent } from './component/account/shop/produit/produit.component';
+import { ImageCropperModule } from 'ngx-image-cropper';
+import { Test_imageComponent } from './component/account/shop/test_image/test_image.component';
+
 
 
 @NgModule({
@@ -34,12 +45,24 @@ import { CardComponent } from './component/card/card.component';
     CardproductsComponent,
     ShopcardComponent,
     CardComponent,
+    CarditemComponent,
+    LoginComponent,
+    CreataccuntComponent,
+    FreeLancerComponent,
+    ShopComponent,
+    Normal_userComponent,
+    ServiceComponent,
+    ProduitComponent,
+    Test_imageComponent
   
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    ImageCropperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

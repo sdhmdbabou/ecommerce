@@ -1,0 +1,61 @@
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Image Upload Preview</title>
+  <!--Font Awesome Icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  
+</head>
+
+<body>
+  
+    <div class="card shadow my-2" style="width: 18rem; border-radius: 12px;">
+      <img [src]="urlink"
+       class="card-img-top"  style="border-top-right-radius: 12px; border-top-left-radius: 12px;" alt="...">
+      <div class="card-body">
+      
+    <input type="file" id="file-input" accept="image/png" (change)="selectFiles($event)"  >
+    
+    <label for="file-input">
+        <i class="fas fa-upload"></i> &nbsp; Choose A Photo
+    </label>
+    
+      </div>
+    </div>
+
+  
+    
+  
+  
+   
+  <!-- <div class="container">
+    <div class="wrapper">
+       <div class="image">
+        <img [src]="urlink" />
+       </div>
+       <div class="content">
+          <div class="icon">
+             <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <div class="text">
+             No file chosen, yet!
+          </div>
+       </div>
+       <div id="cancel-btn">
+          <i class="fas fa-times"></i>
+       </div>
+       <div class="file-name">
+          File name here
+       </div>
+    </div>
+    <input type="file" id="file-input" accept="image/png" id="default-btn" (change)="selectFiles($event)" >
+    <label for="file-input"id="custom-btn" >
+        <i class="fas fa-upload"></i> &nbsp; Choose A Photo
+    </label>
+    
+  
+ </div> -->
+</body>

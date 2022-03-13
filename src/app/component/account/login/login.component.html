@@ -1,0 +1,40 @@
+
+
+  <body>
+    <div class="login-page">
+  <div class="form">
+
+    
+    <form *ngIf="!isNew" class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="text" placeholder="Mobile Number"/>
+      <div  style="float: left;
+      ">
+         <input   type='radio' id='male' checked='checked' name='radio'>
+        <label for='male'><strong >Male</strong></label>
+        <input type='radio' id='female' name='radio'>
+        <label for='female'><strong>Female</strong></label>
+      </div>
+     
+      <input type="password" placeholder="password"/>
+      <input type="password" placeholder="commfirme password"/>
+     
+      <button>create</button>
+    
+      <p class="message">Already registered? <a (click)="changeScreen()">Sign In</a></p>
+     
+    </form>
+    <form *ngIf="isNew" class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <button>login</button>
+      <p class="message">Not registered?    <a (click)="changeScreen()">loguin in</a></p>
+    </form>
+  </div>
+</div>
+
+    
+  </body>
+ 
+
+

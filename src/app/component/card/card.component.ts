@@ -12,14 +12,5 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  value = 0;
 
-  handleMinus() {
- this.value--;
-   
-      
-  }
-  handlePlus() {
-    this.value++;    
-  }
 }
