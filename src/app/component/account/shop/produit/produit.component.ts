@@ -11,6 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ProduitComponent {
+ categorys =["1","2","3"]
+ selected : string|null = null
+
+
+  
   urlink:string="assets/image/o.jpg";
   selectFiles(event : any){
     if(event.target.files){
@@ -25,6 +30,16 @@ export class ProduitComponent {
       }
     }
   }
+  changeSuit(ev : any) {
+   let v = ev.target.value
+   this.selected=v == "null"? null:v
+  }
+  
+
+  f(){
+    console.log(this.selected)
+  }
+  
   
 }
 

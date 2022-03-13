@@ -31,15 +31,17 @@
             <input type="number" placeholder="stock"/>
             <textarea></textarea>
 
-            <select >
-              <option >Category</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+            <select (change)="changeSuit($event)" >
+              <option  value=null >nothing</option>
+              <option *ngFor="let cat of categorys" [ngValue]="cat" >{{cat}}</option>
+             
+              
             </select>
-            <select >
-              <option >Type</option>
-              <option value="1">One</option>
+
+            
+            <select *ngIf="selected!=null" >
+              <option  >Type</option>
+              <option value="1" >One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
@@ -85,7 +87,7 @@
 
             </div>
 
-            <button>create</button>
+            <button (click)="f()">create</button>
         
         </div>
         </form>
