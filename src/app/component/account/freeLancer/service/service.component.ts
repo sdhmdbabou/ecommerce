@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
-
-  constructor() { }
+   saveUsername=false;
+ 
+  constructor() { 
+    
+  }
 
   ngOnInit() {
   }
 
+
+
+  public onSaveUsernameChanged(value:boolean){
+      this.saveUsername = value;
+    console.log( value)}
+   
 }
