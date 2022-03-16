@@ -28,7 +28,6 @@ import { ImageCropperModule } from 'ngx-image-cropper';
 import { Test_imageComponent } from './component/account/shop/test_image/test_image.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
