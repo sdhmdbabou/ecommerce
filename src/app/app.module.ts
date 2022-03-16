@@ -26,6 +26,7 @@ import { ServiceComponent } from './component/account/freeLancer/service/service
 import { ProduitComponent } from './component/account/shop/produit/produit.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { Test_imageComponent } from './component/account/shop/test_image/test_image.component';
+import { NormaluserprofileComponent } from './component/account/normal_user/normaluserprofile/normaluserprofile.component';
 
 
 @NgModule({
@@ -52,7 +53,10 @@ import { Test_imageComponent } from './component/account/shop/test_image/test_im
     Normal_userComponent,
     ServiceComponent,
     ProduitComponent,
-    Test_imageComponent
+    Test_imageComponent,
+    NormaluserprofileComponent,
+    
+    
   
 
   ],
