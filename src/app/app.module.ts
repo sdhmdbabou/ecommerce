@@ -27,6 +27,7 @@ import { ProduitComponent } from './component/account/shop/produit/produit.compo
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { Test_imageComponent } from './component/account/shop/test_image/test_image.component';
 import { NormaluserprofileComponent } from './component/account/normal_user/normaluserprofile/normaluserprofile.component';
+import { Shop_profileComponent } from './component/account/shop/shop_profile/shop_profile.component';
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import { NormaluserprofileComponent } from './component/account/normal_user/norm
     ProduitComponent,
     Test_imageComponent,
     NormaluserprofileComponent,
-    
+    Shop_profileComponent,
     
   
 
