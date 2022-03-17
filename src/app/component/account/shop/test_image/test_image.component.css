@@ -15,9 +15,9 @@
 .restaurant-detailed-ratings-and-reviews hr {
     margin: 0 -24px;
 }
-/* .graph-star-rating-header .star-rating {
+.graph-star-rating-header .star-rating {
     font-size: 17px;
-} */
+}
 .progress {
     background: #f2f4f8 none repeat scroll 0 0;
     border-radius: 0;
@@ -165,8 +165,8 @@
     padding: 0 10px;
 }
 .restaurant-slider-view-all {
-    bottom: 0px;
-    right: 0px;
+    bottom: 15px;
+    right: 15px;
     z-index: 999;
 }
 
@@ -217,4 +217,10 @@
 
 .rating:hover>input:checked~label:before {
     opacity: 0.4
+}
+
+/* //rating one star */
+.ratings i {
+    font-size: 16px;
+    color: rgb(216, 165, 36)
 }
