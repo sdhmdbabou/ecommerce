@@ -1,61 +1,220 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Rubik",sans-serif;
+.total-like-user-main a {
+    display: inline-block;
+    margin: 0 -17px 0 0;
 }
-body{
-    background-color: #f5f8ff;
+.total-like {
+    border: 1px solid;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 500;
+    height: 34px;
+    line-height: 33px;
+    padding: 0 13px;
+    vertical-align: top;
 }
-.container{
+.restaurant-detailed-ratings-and-reviews hr {
+    margin: 0 -24px;
+}
+/* .graph-star-rating-header .star-rating {
+    font-size: 17px;
+} */
+.progress {
+    background: #f2f4f8 none repeat scroll 0 0;
+    border-radius: 0;
+    height: 30px;
+}
+.rating-list {
+    display: inline-flex;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.rating-list-left {
+    height: 16px;
+    line-height: 29px;
+    width: 10%;
+}
+.rating-list-center {
+    width: 80%;
+}
+.rating-list-right {
+    line-height: 29px;
+    text-align: right;
+    width: 10%;
+}
+.restaurant-slider-pics {
+    bottom: 0;
+    font-size: 12px;
+    left: 0;
+    z-index: 999;
+    padding: 0 10px;
+}
+.restaurant-slider-view-all {
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+}
+.offer-dedicated-nav .nav-link.active,
+.offer-dedicated-nav .nav-link:hover,
+.offer-dedicated-nav .nav-link:focus {
+    border-color: #3868fb;
+    color: #3868fb;
+}
+.offer-dedicated-nav .nav-link {
+    border-bottom: 2px solid #fff;
+    color: #000000;
+    padding: 16px 0;
+    font-weight: 600;
+}
+.offer-dedicated-nav .nav-item {
+    margin: 0 37px 0 0;
+}
+.restaurant-detailed-action-btn {
+    margin-top: 12px;
+}
+.restaurant-detailed-header-right .btn-success {
+    border-radius: 3px;
+    height: 45px;
+    margin: -18px 0 18px;
+    min-width: 130px;
+    padding: 7px;
+}
+.text-black {
+    color: #000000;
+}
+.icon-overlap {
+    bottom: -23px;
+    font-size: 74px;
+    opacity: 0.23;
+    position: absolute;
+    right: -32px;
+}
+.menu-list img {
+    width: 41px;
+    height: 41px;
+    object-fit: cover;
+}
+.restaurant-detailed-header-left img {
+    width: 88px;
+    height: 88px;
+    border-radius: 3px;
+    object-fit: cover;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+}
+.reviews-members .media .mr-3 {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+}
+.rounded-pill {
+    border-radius: 50rem!important;
+}
+.total-like-user {
+    border: 2px solid #fff;
+    height: 34px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    width: 34px;
+}
+.total-like-user-main a {
+    display: inline-block;
+    margin: 0 -17px 0 0;
+}
+.total-like {
+    border: 1px solid;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 500;
+    height: 34px;
+    line-height: 33px;
+    padding: 0 13px;
+    vertical-align: top;
+}
+.restaurant-detailed-ratings-and-reviews hr {
+    margin: 0 -24px;
+}
+.graph-star-rating-header .star-rating {
+    font-size: 17px;
+}
+.progress {
+    background: #f2f4f8 none repeat scroll 0 0;
+    border-radius: 0;
+    height: 30px;
+}
+.rating-list {
+    display: inline-flex;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.rating-list-left {
+    height: 16px;
+    line-height: 29px;
+    width: 10%;
+}
+.rating-list-center {
+    width: 80%;
+}
+.rating-list-right {
+    line-height: 29px;
+    text-align: right;
+    width: 10%;
+}
+.restaurant-slider-pics {
+    bottom: 0;
+    font-size: 12px;
+    left: 0;
+    z-index: 999;
+    padding: 0 10px;
+}
+.restaurant-slider-view-all {
+    bottom: 0px;
+    right: 0px;
+    z-index: 999;
+}
+
+.progress {
+    background: #f2f4f8 none repeat scroll 0 0;
+    border-radius: 0;
+    height: 30px;
+}
+
+
+/* rating */
+
+
+.rating {
+    display: flex;
+    margin-top: 1px;
+    flex-direction: row-reverse;
+    margin-left: 250px;
+    float: left
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
     position: relative;
-    height: 300px;
-    width: 100%;
-    border-radius: 10px;
-    background: #fff;
-    border: 2px dashed #c2cdda;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    width: 34px;
+    font-size: 16px;
+    color: rgb(181, 140, 36);
+    cursor: pointer
 }
-input[type="file"]{
-    display: none;
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
 }
-label{
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4984a9;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
 }
-.container p{
-    text-align: center;
-    margin: 20px 0 30px 0;
+
+.rating>input:checked~label:before {
+    opacity: 1
 }
-#images{
-    position:absolute;
-    height: 50%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-figure{
-    width: 45%;
-}
-img{
-    width: 100%;
-}
-figcaption{
-    text-align: center;
-    font-size: 2.4vmin;
-    margin-top: 0.5vmin;
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
 }
