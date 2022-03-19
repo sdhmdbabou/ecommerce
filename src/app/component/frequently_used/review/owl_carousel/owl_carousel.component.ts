@@ -1,36 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
+
 @Component({
-  selector: 'app-test_image',
-  templateUrl: './test_image.component.html',
-  styleUrls: ['./test_image.component.css']
+  selector: 'app-owl_carousel',
+  templateUrl: './owl_carousel.component.html',
+  styleUrls: ['./owl_carousel.component.css']
 })
-export class Test_imageComponent implements OnInit {
-  // image
-  // urlink:string="assets/image/o.jpg";
-  // selectFiles(event : any){
-  //   if(event.target.files){
+export class Owl_carouselComponent implements OnInit {
 
-  //     var reader =new FileReader()
-  //     reader.readAsDataURL(event.target.files[0])
-    
-  
-  //     reader.onload=(ev:any)=>{
-       
-  //       this.urlink=ev.currentTarget.result
-  //     }
-  //   }
-  // }
-
-  
   constructor() { }
 
   ngOnInit() {
   }
-
-  
-   
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
@@ -66,6 +48,3 @@ export class Test_imageComponent implements OnInit {
       {id: 6,titel:"sss",description:"aghh",delivery_days:45,price:988888.2,hasexpress:true,expressdeliverydayts:12,expressprice:45555555 }
     ];
 }
-
-
-

@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-produit',
-  templateUrl: './produit.component.html',
-  styleUrls: ['./produit.component.css']
+  templateUrl: './produit_form.component.html',
+  styleUrls: ['./produit_form.component.css']
 })
 
-export class ProduitComponent {
+export class Produit_formComponent {
  categorys =["1","2","3"]
  selected : string|null = null
 

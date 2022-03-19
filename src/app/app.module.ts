@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,11 +24,21 @@ import { CreataccuntComponent } from './component/account/creataccunt/creataccun
 import { FreeLancerComponent } from './component/account/freeLancer/freeLancer.component';
 import { Normal_userComponent } from './component/account/normal_user/normal_user.component';
 import { ServiceComponent } from './component/account/freeLancer/service/service.component';
-import { ProduitComponent } from './component/account/shop/produit/produit.component';
+import { Produit_formComponent } from './component/account/shop/produit_form/produit_form.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { Test_imageComponent } from './component/account/shop/test_image/test_image.component';
 import { NormaluserprofileComponent } from './component/account/normal_user/normaluserprofile/normaluserprofile.component';
 import { Shop_profileComponent } from './component/account/shop/shop_profile/shop_profile.component';
+import { FrequentlyUsedComponent } from './component/frequently-used/frequently-used.component';
+import { ReviewComponent } from './component/frequently_used/review/review.component';
+
+//owl coursol
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Owl_carouselComponent } from './component/frequently_used/review/owl_carousel/owl_carousel.component';
+import { CarousalComponent } from './component/frequently_used/carousal/carousal.component';
+
+
 
 
 @NgModule({
@@ -53,10 +64,14 @@ import { Shop_profileComponent } from './component/account/shop/shop_profile/sho
     ShopComponent,
     Normal_userComponent,
     ServiceComponent,
-    ProduitComponent,
+    Produit_formComponent,
     Test_imageComponent,
     NormaluserprofileComponent,
     Shop_profileComponent,
+    FrequentlyUsedComponent,
+    ReviewComponent,
+    Owl_carouselComponent,
+    CarousalComponent
     
   
 
@@ -66,7 +81,9 @@ import { Shop_profileComponent } from './component/account/shop/shop_profile/sho
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ImageCropperModule
+    ImageCropperModule,
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
