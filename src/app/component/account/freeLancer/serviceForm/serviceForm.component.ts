@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-service',
-  templateUrl: './service.component.html',
-  styleUrls: ['./service.component.css']
+  templateUrl: './serviceForm.component.html',
+  styleUrls: ['./serviceForm.component.css']
 })
-export class ServiceComponent implements OnInit {
+export class ServiceFormComponent implements OnInit {
    saveUsername=false;
  
   constructor() { 

@@ -1,0 +1,22 @@
+
+  <div class="container-fluid px-3  px-sm-5 my-5 text-start">
+    <h4 class="mb-5 font-weight-bold">What Our Client Say</h4>
+<owl-carousel-o [options]="customOptions" >
+
+  <ng-container   *ngFor="let s of services">
+    <ng-template carouselSlide id="s.id">
+    
+    <app-service-itme [service]="s"></app-service-itme>
+      
+    
+    
+    
+    </ng-template> 
+     
+    
+  </ng-container>
+
+</owl-carousel-o>
+  </div>
+
+

@@ -1,0 +1,36 @@
+
+ <div class="card cardi border-0 py-3 px-4  mx-1 my-5" >
+  <h4 class="mb-1"><a class="text-black" href="#">{{service!.title}}</a></h4>
+    
+  <p class="text-gray lines">{{service!.description}}</p>
+  <div class=" d-flex flex-row">
+    <span class="w-100"> Delivery Dayts</span>
+    <span class="text-end  d-block  font-weight-bold" > {{service!.deliveryDays}}</span>
+
+  </div>
+  <div class=" d-flex flex-row mt-2">
+    <span > Price</span>
+    <span class="text-end w-100 d-block  font-weight-bold " >{{service!.price}}</span>
+
+  </div>
+  <div class=" d-flex flex-row mt-2">
+    <span > hasexpress</span>
+    <span class="text-end w-100 d-block  font-weight-bold " >{{service!.hasExpress}}</span>
+
+  </div>
+  <div class=" d-flex flex-row mt-2">
+    <span class="w-100" > express price</span>
+    <span class="text-end w-100 d-block  font-weight-bold " >{{service!.expressPrice}}</span>
+
+  </div>
+  <div class=" d-flex flex-row mt-2">
+    <span  > express deliveru days</span>
+    <span class="text-end w-100 d-block  font-weight-bold " >{{service!.expressDeliveryDays}}</span>
+
+  </div>
+  
+  <div class="card-body">
+   <button class="button">Continu({{service!.price}})</button>
+  </div>
+</div>
+

@@ -3,28 +3,12 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Produit } from 'src/app/interface/produit';
 
 @Component({
-  selector: 'app-test_image',
-  templateUrl: './test_image.component.html',
-  styleUrls: ['./test_image.component.css']
+  selector: 'app-list-produit-itm-owl',
+  templateUrl: './list-produit-itm-owl.component.html',
+  styleUrls: ['./list-produit-itm-owl.component.css']
 })
-export class Test_imageComponent implements OnInit {
-  // image
-  // urlink:string="assets/image/o.jpg";
-  // selectFiles(event : any){
-  //   if(event.target.files){
+export class ListProduitItmOwlComponent implements OnInit {
 
-  //     var reader =new FileReader()
-  //     reader.readAsDataURL(event.target.files[0])
-    
-  
-  //     reader.onload=(ev:any)=>{
-       
-  //       this.urlink=ev.currentTarget.result
-  //     }
-  //   }
-  // }
-
-  
   constructor() { }
 
   ngOnInit() {
@@ -55,7 +39,7 @@ export class Test_imageComponent implements OnInit {
   }
    
     produits : Produit[] = [
-      {id: 1,title:"sss",imageUrl:"assets/image/a.jpg",description:"",disabled:false,price:200,typeProduit:1,user:1},
+      {id: 1,title:"ggggggggggggggg",imageUrl:"assets/image/a.jpg",description:"",disabled:false,price:200,typeProduit:1,user:1},
       {id: 2,title:"addd",imageUrl:"assets/image/b.jpg",description:"",disabled:false,price:200,typeProduit:1,user:1 },
       {id: 3,title:"ssdddds",imageUrl:"assets/image/z.png" ,description:"",disabled:false,price:200,typeProduit:1,user:1},
       {id: 4,title:"sss",imageUrl:"assets/image/o.jpg" ,description:"",disabled:false,price:200,typeProduit:1,user:1},
@@ -63,10 +47,5 @@ export class Test_imageComponent implements OnInit {
       {id: 6,title:"sss", imageUrl:"assets/image/z.png",description:"",disabled:false,price:200,typeProduit:1,user:1 },
       {id: 8,title:"sss", imageUrl:"assets/image/z.png" ,description:"",disabled:false,price:200,typeProduit:1,user:1}
     ];
-  
-  
-  
+
 }
-
-
-
