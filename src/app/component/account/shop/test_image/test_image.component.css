@@ -1,138 +1,77 @@
-body {
-    color: #000;
-    overflow-x: hidden;
-    height: 100%;
-    background-image: linear-gradient(180deg, #1E88E5, #fff);
-    background-repeat: no-repeat
-}
-
-.cardi {
-    box-shadow: 0px 4px 8px 0px #BDBDBD
-}
-
-.profile-pic {
-    width: 100px !important;
-    height: 100px;
-    box-shadow: 0px 4px 8px 0px #BDBDBD
-}
-
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel .owl-nav button.owl-prev {
-    background: 0 0;
-    color: #1E88E5 !important;
-    border: none;
-    padding: 5px 20px !important;
-    font: inherit;
-    font-size: 50px !important
-}
-
-.owl-carousel .owl-nav button.owl-next:hover,
-.owl-carousel .owl-nav button.owl-prev:hover {
-    color: #0D47A1 !important;
-    background-color: transparent !important
-}
-
-.owl-dots {
-    display: none
-}
-
-button:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline-width: 0
-}
-
-.item {
-    display: none
-}
-
-.next {
-    display: block !important;
-    position: relative;
-    transform: scale(0.8);
-    transition-duration: 0.3s;
-    opacity: 0.6
-}
-
-.prev {
-    display: block !important;
-    position: relative;
-    transform: scale(0.8);
-    transition-duration: 0.3s;
-    opacity: 0.6
-}
-
-.item.show {
-    display: block;
-    transition-duration: 0.4s
-}
-
-@media screen and (max-width: 999px) {
-
-    .next,
-    .prev {
-        transform: scale(1);
-        opacity: 1
-    }
-
-    .item {
-        display: block !important
-    }
-}
-.button{
-    font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #4CAF50;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-.lines{
-
-    text-align: justify;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient:vertical;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: #155fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  .switch-button {
+    background: rgba(255, 255, 255, 0.56);
+    border-radius: 30px;
     overflow: hidden;
-}
-/* // icons heart */
-.fa-gratipay {
-    margin-right: 10px;
-    transition: 0.5s
-}
-
-.fa-gratipay:hover {
-    color: #E74C3C
-}
-
-  /* Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    .card-img-top {
-        height: 19vw;
-    }
+    width: 240px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #155fff;
+    position: relative;
+    padding-right: 120px;
+    position: relative;
   }
-  /* Medium devices (tablets, 768px and up) */
-  /* @media (min-width: 768px) {
-    .card-img-top { */
-        /* height: 16vw;
-    }
+  .switch-button:before {
+    content: "Video";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
   }
-  /* Large devices (desktops, 992px and up) */
-  /* @media (min-width: 992px) {
-    .card-img-top {
-        height: 11vw;
-    }
-  } */
-  /* Extra large devices (large desktops, 1200px and up) */
-  /* @media (min-width: 992px) {
-    .card-img-top {
-        height: 11vw;
-    } */ 
-  /* }  */
+  .switch-button-checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+  }
+  .switch-button-checkbox:checked + .switch-button-label:before {
+    transform: translateX(120px);
+    transition: transform 300ms linear;
+  }
+  .switch-button-checkbox + .switch-button-label {
+    position: relative;
+    padding: 15px 0;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+  }
+  .switch-button-checkbox + .switch-button-label:before {
+    content: "";
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    transform: translateX(0);
+    transition: transform 300ms;
+  }
+  .switch-button-checkbox + .switch-button-label .switch-button-label-span {
+    position: relative;
+  }
+  

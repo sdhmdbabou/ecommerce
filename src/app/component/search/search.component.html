@@ -10,8 +10,12 @@
 </div>
 <div class="col-3 my-2">
     <span class="switcher switcher-1">
-      <input type="checkbox" id="switcher-1">
-      <label for="switcher-1"></label>
+      <input  #saveUserNameCheckBox type="checkbox" id="switcher-1"
+      [checked]="  categorybienOrservice" 
+      (change)="onSaveUsernameChanged(saveUserNameCheckBox.checked)" />
+     
+    
+      <label for="switcher-1"  ></label>
     </span>
 
 </div>
@@ -22,3 +26,4 @@
 
 
 </body>
+routerLink="/card"

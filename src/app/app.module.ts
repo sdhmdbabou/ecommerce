@@ -13,6 +13,7 @@ import { AccountComponent } from './component/account/account.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { SearchComponent } from './component/search/search.component';
 
+
 import { CarouselComponent } from './component/home/carousel/carousel.component';
 
 
@@ -41,6 +42,8 @@ import { ListProduitItmOwlComponent } from './component/home/list-produit-itm-ow
 import { ServiceItmeComponent } from './component/account/freeLancer/service-itme/service-itme.component';
 import { ListServiceItmeOwlComponent } from './component/account/freeLancer/list-service-itme-owl/list-service-itme-owl.component';
 import { ReviewComponent } from './component/frequently_used/review/review/review.component';
+import { CategoryItemComponent } from './component/category/category-item/category-item.component';
+import { CategoryServiceComponent } from './component/category/category-service/category-service.component';
 
 
 
@@ -55,8 +58,10 @@ import { ReviewComponent } from './component/frequently_used/review/review/revie
     AccountComponent,
     NavbarComponent,
     SearchComponent,
+    CategoryItemComponent,
     
     CarouselComponent,
+    CategoryServiceComponent,
     
     ListProduitItmOwlComponent,
     ServiceItmeComponent,

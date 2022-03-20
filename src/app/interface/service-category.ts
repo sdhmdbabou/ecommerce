@@ -1,6 +1,6 @@
 export interface ServiceCategory {
     id:number,
-    descrition:string,
+    description:string,
     imageUrl:string,
     name:string
 }

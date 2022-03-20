@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input ,OnInit } from '@angular/core';
+import { BienCategory } from 'src/app/interface/bien-category';
+
 
 @Component({
   selector: 'app-category-item',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-item.component.css']
 })
 export class CategoryItemComponent implements OnInit {
-
+@Input() category_bien:BienCategory|null=null
   constructor() { }
 
   ngOnInit() {
