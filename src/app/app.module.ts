@@ -44,6 +44,7 @@ import { ListServiceItmeOwlComponent } from './component/account/freeLancer/list
 import { ReviewComponent } from './component/frequently_used/review/review/review.component';
 import { CategoryItemComponent } from './component/category/category-item/category-item.component';
 import { CategoryServiceComponent } from './component/category/category-service/category-service.component';
+import { DProduitItemComponent } from './component/home/d-produit-item/d-produit-item.component';
 
 
 
@@ -59,6 +60,7 @@ import { CategoryServiceComponent } from './component/category/category-service/
     NavbarComponent,
     SearchComponent,
     CategoryItemComponent,
+    DProduitItemComponent ,
     
     CarouselComponent,
     CategoryServiceComponent,
