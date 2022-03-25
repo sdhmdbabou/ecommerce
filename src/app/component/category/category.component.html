@@ -2,28 +2,13 @@
 
 
 
-     
-    
-  
-    
-      
-  
-     
-    
 
 
-
-
-
-
-
-
-
-
-  <div class="container" >
+  <div  class="container" >
     <div class="  d-flex  row">
-      <div class="  clo-xl-2 col-lg-3 col-md-4  col-sm-6 col-12 "  *ngFor="let cat_b of  categorysbien " >
-        <app-category-item [category_bien]="cat_b"></app-category-item>
+      <div class="  clo-xl-2 col-lg-3 col-md-4  col-sm-6 col-12 "  *ngFor="let cat_s of   categoryservice " >
+      
+        <app-category-service [cat_service]="cat_s"></app-category-service>
       </div>
         
     
@@ -31,13 +16,3 @@
     </div>
 </div>
 
-<div class="container" >
-  <div class="  d-flex  row">
-    <div class="  clo-xl-2 col-lg-3 col-md-4  col-sm-6 col-12 "  *ngFor="let cat_b of  categorysbien " >
-      <app-category-item [category_bien]="cat_b"></app-category-item>
-    </div>
-      
-  
-
-  </div>
-</div>

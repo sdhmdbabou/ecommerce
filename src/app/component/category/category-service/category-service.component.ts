@@ -7,7 +7,7 @@ import { ServiceCategory } from 'src/app/interface/service-category';
   styleUrls: ['./category-service.component.css']
 })
 export class CategoryServiceComponent implements OnInit {
-@Input() cat_service:ServiceCategory|null=null
+@Input() cat_service?:ServiceCategory
   constructor() { }
 
   ngOnInit() {

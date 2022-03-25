@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BienCategory } from 'src/app/interface/bien-category';
 import { ServiceCategory } from 'src/app/interface/service-category';
+import { BienServiceSuitchService } from 'src/app/services/bien-service-suitch.service';
 
 @Component({
   selector: 'app-category',
@@ -9,9 +10,12 @@ import { ServiceCategory } from 'src/app/interface/service-category';
 })
 export class CategoryComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+   
+    
   }
 
   categorysbien:BienCategory[]=[
