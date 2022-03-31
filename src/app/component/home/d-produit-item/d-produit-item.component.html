@@ -30,9 +30,66 @@
                     
 
 
-    <app-carditem></app-carditem>
+                    <div class="row">
+
+                        <!-- cart images div -->
+                        <div
+                            class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                  
+                            <img [src]=produit?.imageUrl class="img-fluid" alt="cart img">
+                        </div>
+                        <!-- !-- cart product details -->
+                        <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                            <div class="row">
+                                <!-- product name  -->
+                                <div class="col-lg-8 col-md-7 col-sm-12 card-title">
+                                    <h1 class="mb-4 product_name">{{produit?.title}}</h1>
+                              
+                                     
+                                        <p class=" para mb-0">{{produit?.description}}<br><br></p>
+                                    
+                                </div>
+                                <!-- quantity inc dec -->
+                                <div class="col-lg-4 col-md-3 col-sm-12">
+                                    <ul class="pagination  set_quantity">
+                                        <li class="page-item">
+                                            <button class="page-link "
+                                            (click)="handleMinus()">
+                                                <i class="fas fa-minus"></i> </button>
+                                        </li>
+                                        <li class="page-item"><input type="number" name="" class="page-link"
+                                                value="1" id="textbox"  [(ngModel)]="value">
+                                        </li>
+                                        <li class="page-item">
+                                            <button class="page-link"
+                                            (click)="handlePlus()"> <i
+                                                    class="fas fa-plus"></i></button>
+                                        </li>
+                                    </ul>
+                  
+                  
+                                </div>
+                            </div><br>
+                            <br>
+                            <br>
+                            <!-- //remover move and price -->
+                            
+                             
+                                <div class="col-4 d-flex justify-content-start price_money">
+                                    <h3>$<span id="itemval">{{produit?.price}} </span></h3>
+                                </div>
+                            
+                  
+                  
+                  
+                  
+                  
+                        </div>
+                    </div>
+                  
+    
    
-                  </div>    <button class="button">Continu</button></div>
+                  </div>    <button class="button" (click)="modufyItem()">Add To Card</button></div>
               </div></body>
 
 

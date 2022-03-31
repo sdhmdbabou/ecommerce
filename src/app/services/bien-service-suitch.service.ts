@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable,BehaviorSubject } from 'rxjs';
+import { Urls } from './urls';
 @Injectable()
 export class BienServiceSuitchService {
    
@@ -14,6 +15,7 @@ getObervable(){
 }
 
 setvalue(bienSelected:boolean){
+    
     this.behave.next(bienSelected)
     
 }

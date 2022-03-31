@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { Produit } from 'src/app/interface/produit';
+import { ProduitDetailsService } from 'src/app/services/produitDetails.service';
 
 @Component({
   selector: 'app-produit-item',
@@ -8,11 +10,17 @@ import { Produit } from 'src/app/interface/produit';
 })
 export class ProduitItemComponent implements OnInit {
   @Input() produit :Produit | null = null;
-  constructor() { 
+  constructor(private produitService:ProduitDetailsService,private router:Router) { 
   }
 
   ngOnInit() {
-    console.log(this.produit)
+  }
+
+  details(){
+    this.produitService.setSelectedProduit(this.produit!);
+    this.router.navigateByUrl('/d-produit-item');
+
+
   }
 
 }

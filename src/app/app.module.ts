@@ -45,6 +45,8 @@ import { ReviewComponent } from './component/frequently_used/review/review/revie
 import { CategoryItemComponent } from './component/category/category-item/category-item.component';
 import { CategoryServiceComponent } from './component/category/category-service/category-service.component';
 import { DProduitItemComponent } from './component/home/d-produit-item/d-produit-item.component';
+import { Test1Component } from './test1/test1.component';
+import { Test2Component } from './test2/test2.component';
 
 
 
@@ -86,7 +88,9 @@ import { DProduitItemComponent } from './component/home/d-produit-item/d-produit
     FrequentlyUsedComponent,
     listReviewComponent,
     
-    CarousalComponent
+    CarousalComponent,
+         Test1Component,
+         Test2Component
     
   
 

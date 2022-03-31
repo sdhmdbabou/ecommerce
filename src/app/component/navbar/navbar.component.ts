@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommandService } from 'src/app/services/command.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  c?:number
   
   navbarCollapsed=true
-  constructor() { }
+  
+  constructor(private commandservice:CommandService) { }
 
   ngOnInit(): void {
-  }
 
+    this.commandservice.counter.subscribe((data:number)=>{
+      this.c=data
+
+    })
+  }
+  
+  
 }
