@@ -1,0 +1,157 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Roboto:wght@400&display=swap'); */
+/* 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    
+
+} */
+
+
+   
+
+/* .c{
+  
+    width: 800px;
+    min-width: 350px;
+    min-height: 250px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.w{
+    width: 300%;
+    /* 300% 'caz we have 3 cards */
+    /* min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.cd{
+    width: 800px;
+    min-height: 100%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.ct{
+    width: 70%;
+    height: 250px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+
+.client-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-name{
+    position: absolute;
+    padding-bottom: 2px;
+    left: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+   
+    background: #fff;
+    text-transform: capitalize;
+    font-size: 21px; 
+    font-weight: 600;
+}
+
+.cb{
+    width: 120%;
+    min-height: 100%;
+    height: auto;
+    margin-left: 20px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.review{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+.rating{
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+    
+    .r{
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      text-transform: capitalize;
+    font-size: 21px;
+    align-items: center;
+      
+}
+
+
+.ratin{
+  position: absolute;
+  bottom: 10px;
+  right:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.star{
+    width: 20px;
+    margin-right: 15px;
+}
+  */
+
+  /* body {
+    background: #eee
+} */
+
+.ratings i {
+    font-size: 16px;
+    color: red
+}
+
+.strike-text {
+    color: red;
+    text-decoration: line-through
+}
+
+.product-image {
+    width: 100%
+}
+
+
+
+.spec-1 {
+    color: #938787;
+    font-size: 15px
+}
+
+h5 {
+    font-weight: 400
+}
+
+.para {
+    font-size: 16px
+}

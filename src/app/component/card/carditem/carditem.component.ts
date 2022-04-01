@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Command } from 'src/app/interface/command';
+import { CommandItem } from 'src/app/interface/command-item';
+import { CommandService } from 'src/app/services/command.service';
 
 @Component({
   selector: 'app-carditem',
@@ -6,20 +9,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carditem.component.css']
 })
 export class CarditemComponent implements OnInit {
+  @Input()  item!:CommandItem
 
-  constructor() { }
+ value = 0;
+  constructor(private commandService:CommandService) { }
 
   ngOnInit() {
+    this.value = this.item.nbr;
+    
+
   }
-  value = 0;
+ 
 
   handleMinus() {
+ this.commandService.decrument(this.item.produitObject!);
  this.value--;
    
       
   }
   handlePlus() {
-    this.value++;    
+    this.commandService.incrument(this.item.produitObject!);
+    this.value++;
+   
   }
 
 }

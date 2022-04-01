@@ -8,25 +8,31 @@ import { CommandService } from 'src/app/services/command.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  value = 0;
-command!:Command
+total=0
+totalAVT=0
+ShippingCharge=CommandService.ShippingCharge
+ 
+
+command?:Command
   constructor(private commandservice:CommandService) { }
+
+
 
   ngOnInit(): void {
     this.commandservice.commandOb().subscribe((data)=>{
       this.command=data
+      this.total= CommandService.getTotal(data);
+      this.totalAVT=CommandService.TotalAVT(data)
     })
-    // , this.value = this.commandservice.getItemNbr(this.command!.items[this.value].produit)
-  }
 
 
-  handleMinus() {
- this.value--;
    
-      
+   
+     
   }
-  handlePlus() {
-    this.value++;    
-  }
+
+  
+
+
 
 }

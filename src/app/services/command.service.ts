@@ -8,9 +8,10 @@ import { Produit } from '../interface/produit';
   providedIn: 'root'
 })
 export class CommandService {
+  static  ShippingCharge=100
 
-public counter= new BehaviorSubject<number>(0)
-public command= new BehaviorSubject<Command>(
+private counter= new BehaviorSubject<number>(0)
+private command= new BehaviorSubject<Command>(
   {id:0,
    date:Date.now().toString(),
    isComplite:false,
@@ -26,8 +27,8 @@ constructor() { }
 
 
 
-cunterOb(){
-  return this.counter.asObservable;
+counterOb(){
+  return this.counter.asObservable();
 }
 commandOb(): Observable<Command>{
   return this.command.asObservable();
@@ -58,11 +59,16 @@ addToCounter(n:number){
 
   
 modufyItem(p:Produit,n:number){
-  this.addToCounter( n-this.getItemNbr(p.id))
+  let nbr = n-this.getItemNbr(p.id)
+  this.addToCounter( nbr)
+  
 let commende=this.command.getValue()
-for (var item of commende.items){
-  if(item.produit==p.id){
-    item.nbr=n
+for (var i =0 ; i<commende.items.length; i++){
+  if(commende.items[i].produit==p.id){
+    
+
+    commende.items[i].nbr=n
+    if(n == 0)commende.items.splice(i,1)
     this.command.next(commende)
    return 
   }
@@ -80,5 +86,30 @@ for (var item of commende.items){
 this.command.next(commende)
 }
 
+incrument(p:Produit){
+  let nbr=this.getItemNbr(p.id)+1
+  this.modufyItem(p,nbr)
+}
+decrument(p:Produit){
+  let nbr=this.getItemNbr(p.id)-1
+  this.modufyItem(p,nbr)
+}
+
+static getTotal(command:Command){
+  var total =0;
+
+
+  for (var item of command.items){
+     total+=item.produitObject!.price*item.nbr
+  
+  }   
+  return total
+
+}
+static TotalAVT(command:Command){
+  var TotalAVT=this.getTotal(command)+this.ShippingCharge
+  return TotalAVT
+
+}
 
 }

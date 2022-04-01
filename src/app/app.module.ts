@@ -47,6 +47,9 @@ import { CategoryServiceComponent } from './component/category/category-service/
 import { DProduitItemComponent } from './component/home/d-produit-item/d-produit-item.component';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
+import { TestService } from './test.service';
+import { ProduitDetailsService } from './services/produitDetails.service';
+import { CardEmptyComponent } from './component/card/cardEmpty/cardEmpty.component';
 
 
 
@@ -89,8 +92,10 @@ import { Test2Component } from './test2/test2.component';
     listReviewComponent,
     
     CarousalComponent,
-         Test1Component,
-         Test2Component
+    Test1Component,
+    Test2Component,
+    FreeLancerComponent ,
+    CardEmptyComponent
     
   
 
@@ -102,9 +107,10 @@ import { Test2Component } from './test2/test2.component';
     ReactiveFormsModule,
     ImageCropperModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
   ],
-  providers: [],
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

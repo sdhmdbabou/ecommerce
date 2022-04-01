@@ -18,73 +18,22 @@
 
 <body class="bg-light">
 
-    <div class="container-fluid">
+    <div *ngIf="command!.items.length!==0" class="container-fluid">
         <div class="row">
             <div class="col-md-10 col-11 mx-auto">
                 <div class="row mt-5 gx-3">
                     <!-- left side div -->
                     <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
                         
-                        <div class="card p-4">
-                            <h2 class="py-4 font-weight-bold">Cart (2 items)</h2>
+                        <div  class="card p-4">
+                            <h2 class="py-4 font-weight-bold">Cart ({{command!.items.length}} items)</h2>
 <!-- debutcarditem -->
+<div *ngFor="let item of command!.items">
+    <app-carditem [item]="item" >
 
-<div class="row">
-
-    <!-- cart images div -->
-    <div
-        class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
-
-        <img src="assets/image/o.jpg" class="img-fluid" alt="cart img">
-    </div>
-    <!-- !-- cart product details -->
-    <div class="col-md-7 col-11 mx-auto px-4 mt-2">
-        <div class="row">
-            <!-- product name  -->
-            <div class="col-lg-8 col-md-7 col-sm-12 card-title">
-                <h1 class="mb-4 product_name">Blue Zara Shirt</h1>
-          
-                 
-                    <p class=" para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
-                
-            </div>
-            <!-- quantity inc dec -->
-            <div class="col-lg-4 col-md-3 col-sm-12">
-                <ul class="pagination  set_quantity">
-                    <li class="page-item">
-                        <button class="page-link "
-                        (click)="handleMinus()">
-                            <i class="fas fa-minus"></i> </button>
-                    </li>
-                    <li class="page-item"><input type="number" name="" class="page-link"
-                            value="1" id="textbox"  [(ngModel)]="value">
-                    </li>
-                    <li class="page-item">
-                        <button class="page-link"
-                        (click)="handlePlus()"> <i
-                                class="fas fa-plus"></i></button>
-                    </li>
-                </ul>
+    </app-carditem></div>
 
 
-            </div>
-        </div><br>
-        <br>
-        <br>
-        <!-- //remover move and price -->
-        
-         
-            <div class="col-4 d-flex justify-content-start price_money">
-                <h3>$<span id="itemval">0.00 </span></h3>
-            </div>
-        
-
-
-
-
-
-    </div>
-</div>
 
                     
                       <!-- //end carditem -->
@@ -98,16 +47,16 @@
                             <h2 class="product_name mb-5">The Total Amount Of</h2>
                             <div class="price_indiv d-flex justify-content-between">
                                 <p>Product amount</p>
-                                <p>$<span id="product_total_amt">0.00</span></p>
+                                <p>$<span id="product_total_amt">{{total}}</span></p>
                             </div>
                             <div class="price_indiv d-flex justify-content-between">
                                 <p>Shipping Charge</p>
-                                <p>$<span id="shipping_charge">50.0</span></p>
+                                <p>$<span id="shipping_charge">{{ShippingCharge}}</span></p>
                             </div>
                             <hr />
                             <div class="total-amt d-flex justify-content-between font-weight-bold">
                                 <p>The total amount of (including VAT)</p>
-                                <p>$<span id="total_cart_amt">0.00</span></p>
+                                <p>$<span id="total_cart_amt">{{totalAVT}}</span></p>
                             </div>
                             <button class="btn btn-primary text-uppercase">Checkout</button>
                         </div><!-- discount code part -->
@@ -123,6 +72,8 @@
             </div>
         </div>
     </div>
+<div *ngIf="command!.items.length==0"><app-cardEmpty></app-cardEmpty> </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

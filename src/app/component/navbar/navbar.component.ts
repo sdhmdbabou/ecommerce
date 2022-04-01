@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.commandservice.counter.subscribe((data:number)=>{
+    this.commandservice.counterOb().subscribe((data:number)=>{
       this.c=data
 
     })
