@@ -50,6 +50,7 @@ import { Test2Component } from './test2/test2.component';
 import { TestService } from './test.service';
 import { ProduitDetailsService } from './services/produitDetails.service';
 import { CardEmptyComponent } from './component/card/cardEmpty/cardEmpty.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -108,6 +109,7 @@ import { CardEmptyComponent } from './component/card/cardEmpty/cardEmpty.compone
     ImageCropperModule,
     CarouselModule,
     BrowserAnimationsModule,
+    HttpClientModule
     
   ],
   providers: [TestService],
