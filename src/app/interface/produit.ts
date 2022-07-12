@@ -6,6 +6,7 @@ export interface Produit {
     imageUrl:string,
     disabled:boolean,
     typeProduit:number,
-    user:number
+    user:number,
+    stock:number
 
 }

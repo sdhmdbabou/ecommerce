@@ -32,5 +32,6 @@ export class CarditemComponent implements OnInit {
     this.value++;
    
   }
+ 
 
 }

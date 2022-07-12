@@ -2,18 +2,18 @@
                 
       
   <div class="form">
-    <h1 class="mb-4 product_name">Product Form</h1>
-      <form  class="register-form">
+    <h1 class="mb-4 product_name">Service Form</h1>
+      <form #f="ngForm" (ngSubmit)="submitService(f.value)" class="register-form">
 <div class="row">
     <div class="col col-md-6 col-sm-12 col-12 p-2">
     
-      <input type="text" placeholder="Titel"/>
+      <input type="text" placeholder="Titel" [(ngModel)]="service.title" name="titel"/>
       
       
       
-      <input  type="number" placeholder="Price" />
-      <input type="number" placeholder="Delivery Days " />
-      <textarea></textarea>
+      <input  type="number" placeholder="Price" [(ngModel)]="service.price" name="price" />
+      <input type="number" placeholder="Delivery Days "[(ngModel)]="service.deliveryDays" name="deliveryDays" />
+      <textarea [(ngModel)]="service.description" name="description"></textarea>
 
      
 
@@ -37,7 +37,7 @@
           id="saveUserNameCheckBox" 
           type="checkbox" 
           [checked]="saveUsername" 
-          (change)="onSaveUsernameChanged(saveUserNameCheckBox.checked)" />
+          (change)="onSaveUsernameChanged(saveUserNameCheckBox.checked)"[(ngModel)]="service.hasExpress" name="hasExpress"/>
          
         </div>
         <div class="col">
@@ -50,22 +50,19 @@
       </div>
        
      <div *ngIf="saveUsername">    
-      <input  type="number" placeholder="Express price" />
-      <input type="number" placeholder=" Express Delivery Days " /></div>
+      <input  type="number" placeholder="Express price" [(ngModel)]="service.expressPrice" name="expressPrice"/>
+      <input type="number" placeholder=" Express Delivery Days " [(ngModel)]="service.expressDeliveryDays" name="expressDeliveryDays"/></div>
      
       
-      <select >
-        <option  value=null >Categorys</option>
-        <option   value="1" ></option>
-        <option value="2"  ></option>
-        <option value="3"  ></option>
+      <select (change)="changeSuit($event)" >
+        <option  value=null >None</option>
+        <option *ngFor="let cat of categories" [value]="cat.id" >{{cat.name}}</option>
+        
       </select>
-      <select 
+      <select [(ngModel)]="types"  name="typeService"
         >
-        <option  value=null >Type</option>
-        <option value="1" >One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option  value=null >None</option>
+        <option *ngFor="let type of types" [value]="type.id" >{{type.name}}</option>
       </select>
       </div>
       
@@ -81,7 +78,7 @@
 
       
 
-      <button>create</button>
+      <button >create</button>
   
   </div>
   </form>

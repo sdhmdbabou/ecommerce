@@ -18,33 +18,41 @@
                 
       
         <div class="form">
-          <h1 class="mb-4 product_name">Product Form</h1>
+          <h1 class="mb-4 product_name">Product Form {{name}}</h1>
             <form  class="register-form">
       <div class="row">
           <div class="col col-md-6 col-sm-12 col-12 p-2">
           
-            <input type="text" placeholder="titel"/>
+            <input type="text" placeholder="titel" [(ngModel)]="produit.title"/>
             
             
             
-            <input type="number" placeholder="price"/>
-            <input type="number" placeholder="stock"/>
-            <textarea></textarea>
+            <input type="number" placeholder="price" [(ngModel)]="produit.price"/>
+            <input type="number" placeholder="stock"[(ngModel)]="produit.stock"/>
+            <textarea [(ngModel)]="produit.description"></textarea>
 
-            <select (change)="changeSuit($event)" >
+
+            <select >
+              <option  value='null' >Categorys</option>
+              <option   value="1" >{{name}}</option>
+              <option value="2"  >b</option>
+              <option value="3"  >k</option>
+            </select>
+
+            <!-- <select (change)="changeSuit($event)" >
               <option  value=null >nothing</option>
-              <option *ngFor="let cat of categorys" [ngValue]="cat" >{{cat}}</option>
+              <option  value="ll" >{{name}}</option>
              
-              
-            </select>
+              <option *ngFor="let cat of categorys" [ngValue]="cat" >{{cat.name}}</option>
+            </select> -->
 
             
-            <select *ngIf="selected!=null" >
-              <option  >Type</option>
-              <option value="1" >One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+            <!-- <select [(ngModel)]="selectedType" *ngIf="selected!=null" >
+              
+              <option  value=null >nothing</option>
+              <option *ngFor="let type of types" [ngValue]="type" >{{type.name}}</option>
+              
+            </select> -->
 
            
             
@@ -87,7 +95,7 @@
 
             </div>
 
-            <button (click)="f()">create</button>
+            <button (click)="submitProduit()">create</button>
         
         </div>
         </form>

@@ -1,8 +1,12 @@
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Command } from '../interface/command';
 import { CommandItem } from '../interface/command-item';
 import { Produit } from '../interface/produit';
+import { Urls } from './urls';
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,16 +20,19 @@ private command= new BehaviorSubject<Command>(
    date:Date.now().toString(),
    isComplite:false,
    iscanceled:false,
-   user:0,
+   user:1,
    items:[]
 }
 )
+private status=new BehaviorSubject<commandStatus>(commandStatus.default)
 
+  
 
-constructor() { }
+constructor(private http:HttpClient,) { }
 
-
-
+getStatusOb(){
+  return this.status.asObservable();
+}
 
 counterOb(){
   return this.counter.asObservable();
@@ -111,5 +118,32 @@ static TotalAVT(command:Command){
   return TotalAVT
 
 }
+ async lanchCommand(){
+  this.status.next(commandStatus.lunching);
+ const responce= await  this.http.post(Urls.SaveCommand_url,{
+   "command":this.command.getValue(),
+   'items': this.command.getValue().items
+  },{observe: 'response'})  
+ responce.subscribe((r )=>{
+   if(r.status == 200){
+     this.status.next(commandStatus.lunched);
+   }
+   else{
+    this.status.next(commandStatus.default);
+   }
+  
+  
+ })
 
+
+  
+}
+
+
+}
+
+export enum commandStatus {
+  lunched,
+  lunching,
+  default,
 }

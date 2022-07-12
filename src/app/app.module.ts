@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
@@ -32,6 +32,7 @@ import { NormaluserprofileComponent } from './component/account/normal_user/norm
 import { Shop_profileComponent } from './component/account/shop/shop_profile/shop_profile.component';
 import { FrequentlyUsedComponent } from './component/frequently-used/frequently-used.component';
 import { listReviewComponent } from './component/frequently_used/review/list-review.component';
+import { FormsModule } from '@angular/forms';
 
 //owl coursol
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -51,6 +52,10 @@ import { TestService } from './test.service';
 import { ProduitDetailsService } from './services/produitDetails.service';
 import { CardEmptyComponent } from './component/card/cardEmpty/cardEmpty.component';
 import {HttpClientModule} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+
 
 
 
@@ -109,10 +114,17 @@ import {HttpClientModule} from '@angular/common/http';
     ImageCropperModule,
     CarouselModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
+
+
+    
     
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

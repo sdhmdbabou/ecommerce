@@ -8,7 +8,7 @@ import { BienCategory } from 'src/app/interface/bien-category';
   styleUrls: ['./category-item.component.css']
 })
 export class CategoryItemComponent implements OnInit {
-@Input() category_bien:BienCategory|null=null
+@Input() category_bien?:BienCategory
   constructor() { }
 
   ngOnInit() {

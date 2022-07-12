@@ -78,45 +78,45 @@ export class Urls{
     static  createUserUrl = this.main_url + "create_user/";
   
    static    serviceCategoryTypesUrl( id:number):string {
-     return this.main_url +'servicetypes/'+"$id";
+     return this.main_url +'servicetypes/'+id;
    }
     static    bienCategoryTypesUrl( id:number):string{
-     return this.main_url +'bientypes/'+"$id";
+     return this.main_url +'bientypes/'+id;
    }
   
   
         static   shopProduitsUrl( shopId:number):string {
-          return this.main_url  +"shopProduit/" + "$shopId";
+          return this.main_url  +"shopProduit/" + shopId;
         }
         static   freeLancerServicesUrl( id:number):string{
-          return this.main_url  +"freeLancerServices/" + "$id";
+          return this.main_url  +"freeLancerServices/" + id;
         }
   
         static   reviewerReviewsUrl( id:number, limit?:number ){
          
-           return this.main_url  + "$id/" +"reviewerReviews/" + "${limit ?? 0}";
+           return this.main_url  + id +"/reviewerReviews/" + limit ?? 0;
         }
         static   revieweeReviewsUrl( id:number, limit?:number ){
-          return this.main_url  + "$id/" +"revieweeReviews/" + "${limit ?? 0}";
+          return this.main_url  + id +"/revieweeReviews/" + limit ?? 0;
         }
   
          static   reviewUrl( reviewer:number, reviewee:number){
-          return this.main_url  + "$reviewer/" +"review/" + "$reviewee";
+          return this.main_url  + reviewer+"/review/" + reviewee;
         }
   
           static   userInfo( id:number):string {
-          return this.main_url  + "userIdentification/" +"$id";
+          return this.main_url  + "userIdentification/" +id;
         }
         
         static  getCommand( id:number):string {
-          return this.main_url  + "getCommand/"+ "$id";
+          return this.main_url  + "getCommand/"+ id;
         }
   
          static  productsbytype( id:number):string {
-          return this.main_url  + "productsbytype/"+ "$id";
+          return this.main_url  + "productsbytype/"+ id;
         }
          static  productsbycategory( id:number):string {
-          return this.main_url  + "productsbycategory/"+ "$id";
+          return this.main_url  + "productsbycategory/"+ id;
         }
   
        
