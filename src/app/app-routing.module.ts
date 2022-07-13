@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './authentication.guard';
 import { AccountComponent } from './component/account/account.component';
 import { CreataccuntComponent } from './component/account/creataccunt/creataccunt.component';
 import { FreeLancerComponent } from './component/account/freeLancer/freeLancer.component';
+import { LoginComponent } from './component/account/login/login.component';
 import { CardComponent } from './component/card/card.component';
 
 import { CategoryComponent } from './component/category/category.component';
@@ -11,19 +13,24 @@ import { HomeComponent } from './component/home/home.component';
 import { FreeLanceresComponent } from './component/shop/freeLanceres/freeLanceres.component';
 import { ShopComponent } from './component/shop/shop.component';
 import { ShopcardComponent } from './component/shop/shopcard/shopcard.component';
+import { UnauthenticationGuard } from './unauthentication.guard';
+
+
 
 const routes: Routes = [
-  {path:'',component:HomeComponent,},
-  {path:'category',component:CategoryComponent},
+   {path:'',redirectTo:'/login',pathMatch:'full'},
+  {path:'login',component:LoginComponent,canActivate:[UnauthenticationGuard]},
+  {path:'home',component:HomeComponent,canActivate:[AuthenticationGuard]},
+  {path:'category',component:CategoryComponent,canActivate:[AuthenticationGuard]},
   
-  {path:'shop',component:ShopComponent},
-  {path:'account',component:AccountComponent},
-  {path:'card',component:CardComponent},
-  {path:'creataccunt',component:   CreataccuntComponent},
+  {path:'shop',component:ShopComponent,canActivate:[AuthenticationGuard]},
+  {path:'account',component:AccountComponent,canActivate:[AuthenticationGuard]},
+  {path:'card',component:CardComponent,canActivate:[AuthenticationGuard]},
+  {path:'creataccunt',component:   CreataccuntComponent,canActivate:[AuthenticationGuard]},
   
-  {path:'d-produit-item',component:DProduitItemComponent},
-  {path:'freeLancers',component:FreeLanceresComponent},
-  {path:'shops',component:ShopcardComponent}
+  {path:'d-produit-item',component:DProduitItemComponent,canActivate:[AuthenticationGuard]},
+  {path:'freeLancers',component:FreeLanceresComponent,canActivate:[AuthenticationGuard]},
+  {path:'shops',component:ShopcardComponent,canActivate:[AuthenticationGuard]}
 
 ];
 

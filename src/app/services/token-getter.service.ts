@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from "@auth0/angular-jwt";
+import { BehaviorSubject, Observable } from 'rxjs';
 import { RequestServiceService } from './request-service.service';
 
 import { Urls } from './urls';
@@ -8,16 +9,23 @@ import { Urls } from './urls';
   providedIn: 'root'
 })
 export class TokenGetterService {
-
+isloggin :BehaviorSubject<boolean> =new BehaviorSubject<boolean>(false)
   
-  constructor(private req :RequestServiceService ) { }
+  constructor(private req :RequestServiceService ) {
+
+   }
 
 
-  isAuth(){
+  isAuth :boolean= false;
+
+
+  isAuthenticated(){
     var access =localStorage.getItem("access") 
 
     if(access==null){
-      return false
+      this.isAuth = false
+this.isloggin.next(this.isAuth)
+      return this.isAuth 
 
     }
 
@@ -25,8 +33,10 @@ export class TokenGetterService {
 
     var refresh =localStorage.getItem("refresh")
 
-     return  !jwt.isTokenExpired(access) ||  !jwt.isTokenExpired(refresh!)
+     this.isAuth =   !jwt.isTokenExpired(access) ||  !jwt.isTokenExpired(refresh!)
+     this.isloggin.next(this.isAuth)
 
+    return this.isAuth
     
     
   
@@ -46,12 +56,24 @@ export class TokenGetterService {
  if(jwt.isTokenExpired(access!)) {
    this.req.post(Urls.refresh_token_url,{'refresh':refresh}).subscribe(
     (data:any)=>{
-      localStorage.setItem("access",data['access'])
-      localStorage.setItem("refresh",data['refresh'])}
+      this.setToken(data['access'],data['refresh'])
+    
+    }
    )
  }
 
     
   }
 
+
+  setToken(access:string ,refresh:string){
+    localStorage.setItem("access",access)
+    localStorage.setItem("refresh",refresh)
+    this.isAuthenticated()
+  }
+
+  islogginAsOb(){
+    return this.isloggin.asObservable()
+
+  }
 }
