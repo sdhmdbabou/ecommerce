@@ -56,6 +56,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { ServiceCategoryListComponent } from './component/category/service-category-list/service-category-list.component';
 
 
 
@@ -63,7 +64,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
-    CategoryItemComponent ,
+    ServiceCategoryListComponent ,
 
     AppComponent,
     HomeComponent,
@@ -130,7 +131,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
     
   ],
   exports:[
-    CategoryItemComponent 
+     
   ],
  
   providers: [TestService],
