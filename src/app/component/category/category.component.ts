@@ -23,11 +23,7 @@ export class CategoryComponent implements OnInit {
 
     })
 
-    this.category.getAllServiceCategory().subscribe((service)=>{
-      this.categoryservice=(service as ServiceCategory[])
-      console.log(service)
-    })
-
+   
    
     
   }

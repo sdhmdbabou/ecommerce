@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -17,6 +17,7 @@ import { SearchComponent } from './component/search/search.component';
 import { CarouselComponent } from './component/home/carousel/carousel.component';
 
 
+
 import { ShopcardComponent } from './component/shop/shopcard/shopcard.component';
 import { CardComponent } from './component/card/card.component';
 import { CarditemComponent } from './component/card/carditem/carditem.component';
@@ -30,7 +31,7 @@ import { ImageCropperModule } from 'ngx-image-cropper';
 import { Test_imageComponent } from './component/account/shop/test_image/test_image.component';
 import { NormaluserprofileComponent } from './component/account/normal_user/normaluserprofile/normaluserprofile.component';
 import { Shop_profileComponent } from './component/account/shop/shop_profile/shop_profile.component';
-import { FrequentlyUsedComponent } from './component/frequently-used/frequently-used.component';
+
 import { listReviewComponent } from './component/frequently_used/review/list-review.component';
 import { FormsModule } from '@angular/forms';
 
@@ -62,6 +63,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
+    CategoryItemComponent ,
+
     AppComponent,
     HomeComponent,
     CategoryComponent,
@@ -94,14 +97,17 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
     Test_imageComponent,
     NormaluserprofileComponent,
     Shop_profileComponent,
-    FrequentlyUsedComponent,
+    
     listReviewComponent,
     
     CarousalComponent,
     Test1Component,
     Test2Component,
     FreeLancerComponent ,
-    CardEmptyComponent
+    CardEmptyComponent,
+  
+  
+
     
   
 
@@ -115,6 +121,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
     CarouselModule,
     BrowserAnimationsModule,
     HttpClientModule,
+
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
 
@@ -122,6 +129,10 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
     
     
   ],
+  exports:[
+    CategoryItemComponent 
+  ],
+ 
   providers: [TestService],
   bootstrap: [AppComponent]
 })

@@ -9,6 +9,10 @@ import { BienCategory } from 'src/app/interface/bien-category';
 })
 export class CategoryItemComponent implements OnInit {
 @Input() category_bien?:BienCategory
+image:string=""
+titel:string=""
+
+
   constructor() { }
 
   ngOnInit() {

@@ -6,8 +6,10 @@ import { CreataccuntComponent } from './component/account/creataccunt/creataccun
 import { FreeLancerComponent } from './component/account/freeLancer/freeLancer.component';
 import { LoginComponent } from './component/account/login/login.component';
 import { CardComponent } from './component/card/card.component';
+import { BienCategryListComponent } from './component/category/Bien-categry-list/Bien-categry-list.component';
 
 import { CategoryComponent } from './component/category/category.component';
+import { ServiceCategoryListComponent } from './component/category/service-category-list/service-category-list.component';
 import { DProduitItemComponent } from './component/home/d-produit-item/d-produit-item.component';
 import { HomeComponent } from './component/home/home.component';
 import { FreeLanceresComponent } from './component/shop/freeLanceres/freeLanceres.component';
@@ -30,7 +32,13 @@ const routes: Routes = [
   
   {path:'d-produit-item',component:DProduitItemComponent,canActivate:[AuthenticationGuard]},
   {path:'freeLancers',component:FreeLanceresComponent,canActivate:[AuthenticationGuard]},
-  {path:'shops',component:ShopcardComponent,canActivate:[AuthenticationGuard]}
+  {path:'shops',component:ShopcardComponent,canActivate:[AuthenticationGuard]},
+  {path:'biencategory',component:BienCategryListComponent,canActivate:[AuthenticationGuard]},
+  {path:'servicecategory',component:ServiceCategoryListComponent,canActivate:[AuthenticationGuard]},
+
+  
+
+  
 
 ];
 
